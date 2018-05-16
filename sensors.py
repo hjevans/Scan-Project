@@ -9,7 +9,7 @@ def entrySensor():
     sense = GPIO.input(11) & GPIO.input(7)
     #while not sense:
         #sense = GPIO.input(11)
-    time.sleep(.25)
+    #time.sleep(.25)
     return sense
 
 def exitSensor():
@@ -20,7 +20,7 @@ def exitSensor():
     motion = GPIO.input(15) & GPIO.input(13)
     #while not motion:
         #motion = GPIO.input(15)
-    time.sleep(.25)
+    #time.sleep(.25)
     return motion
 
 #def carExit():

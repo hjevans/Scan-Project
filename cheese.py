@@ -59,13 +59,14 @@ def cheese(cap0,cap1,cap2,cap3,path,itr):
     ret1,frame1 = cap1.read()
     ret2,frame2 = cap2.read()
     ret3,frame3 = cap3.read()
-    itr = str(itr)
-    os.chdir(path)
-    cv2.imwrite(itr+'-cam0.jpg',frame0)
-    cv2.imwrite(itr+'-cam1.jpg',frame1)
-    cv2.imwrite(itr+'-cam2.jpg',frame2)
-    cv2.imwrite(itr+'-cam3.jpg',frame3)
+    if itr > -1:
+        itr = str(itr)
+        os.chdir(path)
+        cv2.imwrite(itr+'-cam0.jpg',frame0)
+        cv2.imwrite(itr+'-cam1.jpg',frame1)
+        cv2.imwrite(itr+'-cam2.jpg',frame2)
+        cv2.imwrite(itr+'-cam3.jpg',frame3)
 
-    os.chdir('/home/pi')
+        os.chdir('/home/pi')
 
     
